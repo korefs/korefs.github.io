@@ -1,9 +1,9 @@
 ---
-title: Text and Typography
-description: Examples of text, algorithms, math equations, diagrams, flowcharts, pictures, videos, and more.
+title: Entendendo o Algoritmo de Dijkstra
+description: Explicando como o algoritmo de Dijkstra encontra o caminho mais curto em um grafo ponderado. Vamos abordar sua lógica e aplicação prática de forma simples e direta.
 author: Gabriel
 date: 2025-01-16 18:02:00 +0300
-categories: [DSA, Estrutura de Dados, Algoritmos]
+categories: [DSA, Estrutura-de-Dados, Algoritmos]
 tags: [algorithms]
 pin: true
 math: true

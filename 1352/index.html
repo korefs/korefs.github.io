@@ -48,6 +48,8 @@
 
     var key = null, fwnum = null;
     var m = /PlayStation\s+4[\/ ](\d+)\.(\d+)/.exec(navigator.userAgent);
+    var isPS4Browser = m !== null;
+    var platform = isPS4Browser ? "PlayStation 4" : (navigator.platform || "unknown");
     if (m) {
         var ms = parseInt(m[2], 16).toString(16);
         if (ms.length < 2) ms = "0" + ms;
@@ -60,6 +62,13 @@
     detEl.innerHTML = "firmware <b>" + (key || "unknown") + "</b>"
         + (supported ? " &middot; <b>supported</b>"
                      : " &middot; not in this build's kernel table");
+    detEl.appendChild(document.createElement("br"));
+    detEl.appendChild(document.createTextNode("platform "));
+    var platformEl = document.createElement("b");
+    platformEl.textContent = platform;
+    detEl.appendChild(platformEl);
+    detEl.appendChild(document.createTextNode(
+        isPS4Browser ? " · PS4 browser" : " · not a PS4 browser"));
 
     var target = "jb.html" + location.search;
     function go() { setState("loading jailbreak...", "warn"); location.replace(target); }

@@ -1,43 +1,18 @@
-# Chirpy Starter
+# korefs.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Página pessoal de Gabriel (@korefs). Landing page estática, responsiva e de tela única, feita com HTML e CSS.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Desenvolvimento
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+Execute `python3 -m http.server 4173` na raiz e abra http://localhost:4173.
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+O conteúdo está em `index.html`; os estilos e o favicon, em `assets/`.
+Apresentação e projetos baseados no [perfil público do GitHub](https://github.com/korefs).
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+## Publicação
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+O workflow `.github/workflows/pages-deploy.yml` publica no GitHub Pages a cada push em `main` ou `master`. Nas configurações do repositório, use **GitHub Actions** como fonte de publicação.
 
-## Usage
+Sem JavaScript, Ruby, Jekyll ou compilação. A fonte Instrument Serif é carregada pelo Google Fonts, com fallback local.
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+O layout cabe na tela em dispositivos comuns. Em alturas excepcionalmente pequenas ou com ampliação de texto, a rolagem permanece disponível para preservar o acesso ao conteúdo.

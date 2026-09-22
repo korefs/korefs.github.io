@@ -84,6 +84,12 @@
         window.addEventListener("keydown", fire);
     }
 
+    if(!isPS4Browser) {
+        setState("NOT A PS4 BROWSER", "bad");
+        waitForTap("NOT A PS4 BROWSER -- press X or tap to run anyway", go);
+        return;
+    }
+    
     // Off-target consoles are not launched automatically -- one tap still runs
     // it, so a user-agent quirk on the real 13.52 console can never lock it out.
     if (!supported) {
